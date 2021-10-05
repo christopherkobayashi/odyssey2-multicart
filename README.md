@@ -1,9 +1,12 @@
 # odyssey2-multicart
 Simple Odyssey2/Videopac multicart
 
-[Wilco2008's blog](https://web.archive.org/web/20210601074542/https://wilco2009.blogspot.com/2018/09/videopac-multirom-cart-version-1.html)
+The hardware design is courtesy
+[Wilco2008's blog](https://web.archive.org/web/20210601074542/https://wilco2009.blogspot.com/2018/09/videopac-multirom-cart-version-1.html).
 
-[Videopac Forum)(http://videopac.nl/forum/index.php?topic=1778.0)
+The ROM memory layout is documented in this post at the
+[Videopac Forum](http://videopac.nl/forum/index.php?topic=1778.0).
+The relevent code is below.
 
 ```
 	nb=size/1024;  // find out number of kbytes to load
