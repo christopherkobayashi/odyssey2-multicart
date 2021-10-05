@@ -1,12 +1,20 @@
-# odyssey2-multicart
-Simple Odyssey2/Videopac multicart
+# Simple Odyssey2/Videopac multicart
 
-The hardware design is courtesy
+This is a simple manually-switched Odyssey2/Videopac multicart.  DIP switches select from one of 32 cartridge banks.
+
+The hardware design is not mine.  It is courtesy
 [Wilco2008's blog](https://web.archive.org/web/20210601074542/https://wilco2009.blogspot.com/2018/09/videopac-multirom-cart-version-1.html).
 
-The ROM memory layout is documented in this post at the
-[Videopac Forum](http://videopac.nl/forum/index.php?topic=1778.0).
-The relevent code is below.
+The multicart Eagle schematic and board files are in the eagle/ subdirectory.  Gerber files suitable for fabrication from PCBway are in the gerber/ subdirectory.
+
+The EEPROM is a Winbond 29C040, which are readily available on the secondary market.  The resisters are typical 1/4 watt pulldowns; I used 4.7k because I had them lying around.  The capacitor is a 0.1uF non-polarized ceramic.
+
+Wilco2008 provided a Windows binary to convert o2em ROM files into 16k images suitable for each bank.  Unfortunately, the binary doesn't work (it appears to FTP to a site that doesn't exist anymore, and then quits immediately).  Source code is unavailable.
+
+Happily, the ROM memory layout is documented in this post at the
+[Videopac Forum](http://videopac.nl/forum/index.php?topic=1778.0).  The python script `prep-16k.py` will assemble a bank-switched image from an input file.
+
+The code from the forum post is below.
 
 ```
 	nb=size/1024;  // find out number of kbytes to load
