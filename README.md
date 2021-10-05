@@ -1,12 +1,12 @@
 # odyssey2-multicart
 Simple Odyssey2/Videopac multicart
 
-https://web.archive.org/web/20210601074542/https://wilco2009.blogspot.com/2018/09/videopac-multirom-cart-version-1.html
+[Wilco2008's blog](https://web.archive.org/web/20210601074542/https://wilco2009.blogspot.com/2018/09/videopac-multirom-cart-version-1.html)
 
-http://videopac.nl/forum/index.php?topic=1778.0
+[Videopac Forum)(http://videopac.nl/forum/index.php?topic=1778.0)
 
-`
-nb=size/1024;  // find out number of kbytes to load
+```
+	nb=size/1024;  // find out number of kbytes to load
 
         switch (nb){
             case 2: // 2 k cartridge no A10
@@ -51,6 +51,6 @@ nb=size/1024;  // find out number of kbytes to load
                     printf("Panic!\n\rUnknown rom size\n\r");
                     break;
         }
-`
+```
 
 
