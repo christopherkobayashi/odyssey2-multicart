@@ -25,7 +25,7 @@ if size == 2048:
   rom_table[0x0400:0x0c00] = in_rom[0x0000:0x0800]
   # One mirror for A10 lossage
   rom_table[0x0c00:0x1000] = rom_table[0x0800:0x0c00]
-  # Two mirrors to fill 16k
+  # Replicate throughout 16k
   rom_table[0x1000:0x2000] = rom_table[0x0000:0x1000]
   rom_table[0x2000:0x4000] = rom_table[0x0000:0x2000]
 
@@ -36,7 +36,7 @@ elif size == 4096:
   # Two mirrors for A10 lossage
   rom_table[0x0c00:0x1000] = rom_table[0x0800:0x0c00]
   rom_table[0x1c00:0x2000] = rom_table[0x1800:0x1c00]
-  # One mirror to fill 16k
+  # Replicate throughout 16k
   rom_table[0x2000:0x4000] = rom_table[0x0000:0x2000]
 
 elif size == 8192:
@@ -50,7 +50,7 @@ elif size == 8192:
   rom_table[0x1c00:0x2000] = rom_table[0x1800:0x1c00]
   rom_table[0x2c00:0x3000] = rom_table[0x2800:0x2c00]
   rom_table[0x3c00:0x4000] = rom_table[0x3800:0x3c00]
-  # Already at 16k, no need to mirror further
+  # Already at 16k, no need for anything more
 
 else:
   print("error: can't handle anything not 2k/4k/8k")
