@@ -63,7 +63,7 @@ elif size == 8192:
 
 else:
   print("error: can't handle anything bigger than 8k")
-  sys.exit()
+  sys.exit(-1)
 
 with open(outfile, "wb") as out_rom:
   out_rom.write(rom_table)
